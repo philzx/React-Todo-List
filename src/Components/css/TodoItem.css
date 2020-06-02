@@ -1,0 +1,14 @@
+#todo-item {
+  padding-top: 5px;
+}
+
+.trashBin {
+  display: inline-block;
+  float: right;
+  color: red;
+  cursor: pointer;
+}
+
+.button {
+  float: right;
+}

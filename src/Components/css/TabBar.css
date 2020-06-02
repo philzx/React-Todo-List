@@ -1,0 +1,9 @@
+.item {
+  color: darkgrey;
+}
+.item:hover {
+  color: white;
+}
+#tab-bar {
+  padding-top: 15px;
+}
