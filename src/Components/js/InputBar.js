@@ -4,7 +4,7 @@ import { Input, Button, Form, FormGroup, Row, Col } from "reactstrap";
 
 class InputBar extends Component {
   state = {
-    status: "Incompleted",
+    message: "",
   };
 
   handleChange = (e) => {
@@ -15,7 +15,8 @@ class InputBar extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.addTodo(this.state);
+    const { message } = this.state;
+    this.props.addTodo({ message, status: "Incompleted" });
     e.target.reset();
   };
 
