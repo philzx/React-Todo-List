@@ -62,21 +62,18 @@ class App extends Component {
     });
   };
 
-  filtering = (status) => {
-    return this.state.todos.filter((todo) => {
-      return todo.status === status;
-    });
-  };
-
   filteredList = () => {
-    if (
-      this.state.active === "Completed" ||
-      this.state.active === "Incompleted"
-    ) {
-      return this.filtering(this.state.active);
-    } else {
-      return this.state.todos;
-    }
+    const filter = (status) => {
+      return this.state.todos.filter((todo) => {
+        return todo.status === status;
+      });
+    };
+
+    const active = this.state.active;
+
+    return active === "Completed" || active === "Incompleted"
+      ? filter(active)
+      : this.state.todos;
   };
 
   render() {
